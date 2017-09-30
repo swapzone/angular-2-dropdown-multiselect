@@ -276,6 +276,7 @@ export class MultiselectDropdown implements OnInit, OnChanges, DoCheck, ControlV
     this.model = this.model.concat(checkedOptions);
     this.onModelChange(this.model);
     this.onModelTouched();
+    return false;
   }
 
   uncheckAll() {
@@ -292,6 +293,7 @@ export class MultiselectDropdown implements OnInit, OnChanges, DoCheck, ControlV
     });
     this.onModelChange(this.model);
     this.onModelTouched();
+    return false;
   }
 
   preventCheckboxCheck(event: Event, option: IMultiSelectOption) {
